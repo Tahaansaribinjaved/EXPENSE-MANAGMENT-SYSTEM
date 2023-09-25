@@ -78,16 +78,16 @@ function del(e) {
 
 
 function editfunc(e) {
-    var a = prompt('Enter update title', e.parentNode.parentNode.firstChild.textContent)
-    var b = +prompt('Enter update amount', e.parentNode.parentNode.children[1].textContent)
-    var oldValue = parseInt(b);
-    e.parentNode.parentNode.firstChild.textContent = a
-    e.parentNode.parentNode.children[1].textContent = b
-    tAmount =  oldValue ;
-    tAmount = (tAmount - oldValue)
-    gettotal.textContent = tAmount 
-// console.log(tAmount)
+    var a = prompt('Enter update title', e.parentNode.parentNode.firstChild.textContent);
+    var b = +prompt('Enter update amount', e.parentNode.parentNode.children[1].textContent);
+    var newValue = parseInt(b);
+    var oldValue = parseInt(e.parentNode.parentNode.children[1].textContent);
 
+    e.parentNode.parentNode.firstChild.textContent = a;
+    e.parentNode.parentNode.children[1].textContent = b;
+
+    tAmount = tAmount - oldValue + newValue;
+    gettotal.textContent = tAmount;
 }
 
 
