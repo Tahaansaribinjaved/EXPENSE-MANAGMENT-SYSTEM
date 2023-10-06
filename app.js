@@ -71,9 +71,16 @@ function addExpense() {
 
 function deleteAll() {
     getTr.innerHTML = ''
+    tAmount = '00'
+    gettotal.textContent = tAmount
 }
 function del(e) {
     e.parentNode.parentNode.remove()
+    var a =   e.parentNode.parentNode.children[1].textContent
+    tAmount -= a
+    gettotal.textContent = tAmount
+    // console.log(e.parentNode.parentNode.children[1].textContent)
+    
 }
 
 
